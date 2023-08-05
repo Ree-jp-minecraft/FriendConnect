@@ -142,7 +142,7 @@ export class LinkCodeTokenProvider
 
 	async get(): Promise<XboxLiveToken> {
 		//debug(this.email, this.authPath, this.authOptions);
-
+        	this.authOptions["flow"] = "live";
 		let token = await new Authflow(
 			this.email,
 			this.cachePath,
